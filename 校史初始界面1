@@ -1,0 +1,69 @@
+wxml:
+<video id='myVideo' controls></video>
+
+<view class='danmu'>
+  <input type='text' placeholder="请输入弹幕内容:"></input>
+  <button>发送弹幕</button>
+</view>
+
+<view class="videoList">
+  <view class="videoBar">
+    <image src="/images/1.jpg"></image>
+    <text>测试第一个</text>
+  </view>
+</view>
+
+wxss:
+video{
+  width: 100%;
+}
+.danmu{
+  display: flex;
+  flex-direction: row;
+}
+input{
+  border: 1rpx solid #987938;
+  height: 100rpx;
+  flex-grow: 1;
+}
+button{
+  color: white;
+  background-color: #987938;
+}
+image{
+  width: 70rpx;
+  height: 70rpx;
+  margin: 20rpx;
+}
+.videoList{
+  width: 100%;
+  min-height: 400rpx;
+}
+.videoBar{
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1rpx solid #987938;
+  margin: 10 rpx;
+}
+text{
+  font-size: 45rpx;
+  color: #987938;
+  margin: 20rpx;
+  flex-grow: 1;
+}
+
+app.json:
+{
+  "pages": [
+    "pages/index/pages"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#987938",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "校史",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  }
+}
